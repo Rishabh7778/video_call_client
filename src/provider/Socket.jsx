@@ -8,7 +8,7 @@ export const useSocket = () => {
 };
 
 export const SocketProvider = (props) => {
-  const socket = useMemo(() => io("https://videochat-server-vtap.onrender.com")); 
+  const socket = useMemo(() => io("https://videochat-server-vtap.onrender.com"), []); 
 
   return (
     <SocketContext.Provider value={{ socket }}>
